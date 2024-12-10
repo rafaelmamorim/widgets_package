@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widgets_package/theme/white_color_scheme.dart';
 
 class DialogBox extends StatelessWidget {
   final String title;
@@ -14,12 +15,14 @@ class DialogBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final WhiteColorScheme colorScheme = WhiteColorScheme();
+
     return AlertDialog(
       title: Row(
         children: [
-          const Icon(
+          Icon(
             Icons.warning, // Ícone de alerta
-            color: Colors.orange,
+            color: colorScheme.laranja,
           ),
           const SizedBox(width: 10),
           Text(title),

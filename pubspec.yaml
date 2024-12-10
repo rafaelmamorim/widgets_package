@@ -1,6 +1,6 @@
 name: widgets_package
 description: "Um conjunto de widgets reutilizáveis para Flutter."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/rafaelmamorim/widgets_package
 
 environment:

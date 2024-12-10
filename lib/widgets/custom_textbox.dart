@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../theme/white_color_scheme.dart';
+import 'package:widgets_package/theme/white_color_scheme.dart';
 
 class CustomTextBox extends StatelessWidget {
   final String labelText;
@@ -17,7 +17,7 @@ class CustomTextBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var irugColorScheme = const WhiteColorScheme();
+    var irugColorScheme = WhiteColorScheme();
 
     return TextField(
       controller: controller,
@@ -27,7 +27,7 @@ class CustomTextBox extends StatelessWidget {
         labelText: labelText,
         enabledBorder: UnderlineInputBorder(
           borderSide: BorderSide(
-            color: irugColorScheme.cinzaUnipampa,
+            color: irugColorScheme.cinza,
             width: 2,
           ),
           borderRadius: const BorderRadius.only(
@@ -37,7 +37,7 @@ class CustomTextBox extends StatelessWidget {
         ),
         focusedBorder: UnderlineInputBorder(
           borderSide: BorderSide(
-            color: irugColorScheme.verdeUnipampa,
+            color: irugColorScheme.verde,
             width: 2,
           ),
         ),
