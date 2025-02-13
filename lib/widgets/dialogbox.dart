@@ -47,15 +47,16 @@ class DialogBox extends StatelessWidget {
           },
           child: const Text('OK'),
         ),
-        TextButton(
-          onPressed: () {
-            Navigator.of(context).pop(); // Fecha o diálogo
-            if (onPressedCancel != null) {
-              onPressedCancel!(); // Chama a função de callback (se houver)
-            }
-          },
-          child: const Text('Cancelar'),
-        ),
+        if (showCancel?? false)
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Fecha o diálogo
+                if (onPressedCancel != null) {
+                  onPressedCancel!(); // Chama a função de callback (se houver)
+                }
+              },
+              child: const Text('Cancelar'),
+            ),
       ],
     );
   }
@@ -97,7 +98,7 @@ void showCustomDialog({
   VoidCallback? onPressedCancel,
   Color? corIcone,
   bool showCancel = false,
-  IconData icon = Icons.warning, 
+  IconData icon = Icons.warning,
 }) {
   try {
     showDialog(

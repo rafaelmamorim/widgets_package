@@ -8,12 +8,12 @@ class CustomTextBox extends StatelessWidget {
   final TextInputType keyboardType;
 
   const CustomTextBox({
-    Key? key,
+    super.key,
     required this.labelText,
     this.isPassword = false,
     this.controller,
     this.keyboardType = TextInputType.text,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

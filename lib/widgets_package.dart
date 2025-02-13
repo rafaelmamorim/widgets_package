@@ -1,4 +1,4 @@
-library widgets_package;
+library;
 
 export 'widgets/custom_textbox.dart';
 export 'widgets/dialogbox.dart';
