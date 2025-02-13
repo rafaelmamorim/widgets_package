@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner:
-          false, // Adicione isso se quiser ocultar o banner de debug
+          false, 
       home: const HomeScreen(),
     );
   }
@@ -41,9 +41,10 @@ class HomeScreen extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               showCustomDialog(
-                context,
-                'Alert',
-                'This is an alert message',
+                context: context,
+                title: 'Alert',
+                content: 'This is an alert message',
+                showCancel: true,
               );
             },
             child: const Text('Click me!'),
